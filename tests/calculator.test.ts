@@ -2,8 +2,10 @@ import { describe, expect, it } from "vitest";
 
 import {
   calculateTourBudget,
+  DRINK_FEE_PER_SHOW,
   generateRouteOptions,
   groupSelectedShowsIntoTrips,
+  TICKET_AND_FEE_PER_SHOW,
 } from "../lib/calculator";
 import { shows, venues, type TourShow } from "../lib/data";
 
@@ -23,9 +25,8 @@ describe("tour budget calculator", () => {
     expect(result).toMatchObject({
       showCount: 0,
       tripCount: 0,
-      ticketBase: 0,
+      ticketAndFee: 0,
       drink: 0,
-      userFee: 0,
       transport: 0,
       lodging: 0,
       total: 0,
@@ -39,13 +40,22 @@ describe("tour budget calculator", () => {
       show("2027-06-13-comtec-portbase-day2"),
     ];
     const trips = groupSelectedShowsIntoTrips(selectedShows, "kansai");
-    const result = calculateTourBudget({ selectedShows, originRegionId: "kansai" });
+    const result = calculateTourBudget({
+      selectedShows,
+      originRegionId: "kansai",
+      tripOverrides: {
+        [trips[0].id]: { transportCost: 24_000 },
+      },
+    });
 
     expect(trips).toHaveLength(1);
     expect(trips[0].shows).toHaveLength(2);
     expect(result.tripCount).toBe(1);
+    expect(result.transport).toBe(24_000);
     expect(result.transport).toBe(result.trips[0].transportCost);
     expect(result.trips[0].nights).toBeGreaterThanOrEqual(1);
+    expect(result.trips[0].ticketAndFee).toBe(2 * TICKET_AND_FEE_PER_SHOW);
+    expect(result.trips[0].drink).toBe(2 * DRINK_FEE_PER_SHOW);
   });
 
   it("does not group same-city shows on separated dates", () => {
@@ -62,29 +72,7 @@ describe("tour budget calculator", () => {
     expect(trips.map((trip) => trip.shows)).toEqual([[first], [separated]]);
   });
 
-  it("splits car transport among the party", () => {
-    const selectedShows = [show("2027-06-12-comtec-portbase-day1")];
-    const trip = groupSelectedShowsIntoTrips(selectedShows, "kansai")[0];
-    const baseInput = {
-      selectedShows,
-      originRegionId: "kansai" as const,
-      tripOverrides: {
-        [trip.id]: { mode: "car" as const, transportCost: 24_000 },
-      },
-    };
-
-    const solo = calculateTourBudget({ ...baseInput, carPartySize: 1 });
-    const partyOfThree = calculateTourBudget({
-      ...baseInput,
-      carPartySize: 3,
-    });
-
-    expect(solo.transport).toBe(24_000);
-    expect(partyOfThree.transport).toBe(8_000);
-    expect(partyOfThree.total).toBe(solo.total - 16_000);
-  });
-
-  it("uses no drink fee for K Arena and the confirmed 600 yen fee for Osaka", () => {
+  it("uses fixed 7,800 yen ticket-and-fee and 700 yen drink amounts per show", () => {
     const selectedShows = [
       show("2027-03-22-k-arena-yokohama"),
       show("2027-05-15-zepp-osaka-bayside-day2"),
@@ -92,31 +80,87 @@ describe("tour budget calculator", () => {
     const result = calculateTourBudget({
       selectedShows,
       originRegionId: "kansai",
-      drinkFeePerShow: 777,
     });
 
     expect(result.showCount).toBe(2);
-    expect(result.ticketBase).toBe(15_800);
-    expect(result.drink).toBe(600);
-    expect(
-      calculateTourBudget({
-        selectedShows: [selectedShows[0]],
-        originRegionId: "kanto",
-        drinkFeePerShow: 777,
-      }).drink,
-    ).toBe(0);
-    expect(result.ticketStatusCounts).toEqual({ confirmed: 2, provisional: 0 });
-    expect(result.hasProvisionalTickets).toBe(false);
+    expect(result.ticketAndFee).toBe(15_600);
+    expect(result.drink).toBe(1_400);
   });
 
-  it("uses the entered fallback drink fee for other livehouses", () => {
+  it("exposes a per-trip breakdown whose parts sum exactly to its total", () => {
+    const selectedShows = [show("2027-03-22-k-arena-yokohama")];
+    const grouped = groupSelectedShowsIntoTrips(selectedShows, "kanto");
     const result = calculateTourBudget({
-      selectedShows: [show("2027-04-17-zepp-fukuoka-day2")],
-      originRegionId: "kyushu",
-      drinkFeePerShow: 700,
+      selectedShows,
+      originRegionId: "kanto",
+      hotelNightlyRate: 3_000,
+      tripOverrides: {
+        [grouped[0].id]: { transportCost: 1_000, nights: 2 },
+      },
+    });
+    const trip = result.trips[0];
+
+    expect(trip).toMatchObject({
+      ticketAndFee: 7_800,
+      drink: 700,
+      transportCost: 1_000,
+      nights: 2,
+      lodgingCost: 6_000,
+      total: 15_500,
+      carPartySize: 1,
+    });
+    expect(trip.total).toBe(
+      trip.ticketAndFee + trip.drink + trip.transportCost + trip.lodgingCost,
+    );
+    expect(result.total).toBe(
+      result.trips.reduce((sum, item) => sum + item.total, 0),
+    );
+  });
+
+  it("supports different car party sizes for separate trips", () => {
+    const selectedShows = [
+      show("2027-04-17-zepp-fukuoka-day2"),
+      show("2027-06-12-comtec-portbase-day1"),
+    ];
+    const trips = groupSelectedShowsIntoTrips(selectedShows, "kansai");
+    const result = calculateTourBudget({
+      selectedShows,
+      originRegionId: "kansai",
+      tripOverrides: {
+        [trips[0].id]: {
+          mode: "car",
+          transportCost: 24_000,
+          carPartySize: 2,
+        },
+        [trips[1].id]: {
+          mode: "car",
+          transportCost: 24_000,
+          carPartySize: 4,
+        },
+      },
     });
 
-    expect(result.drink).toBe(700);
+    expect(result.trips.map((trip) => trip.carPartySize)).toEqual([2, 4]);
+    expect(result.trips.map((trip) => trip.transportCost)).toEqual([
+      12_000,
+      6_000,
+    ]);
+    expect(result.transport).toBe(18_000);
+  });
+
+  it("rejects an invalid per-trip car party size", () => {
+    const selectedShows = [show("2027-06-12-comtec-portbase-day1")];
+    const trip = groupSelectedShowsIntoTrips(selectedShows, "kansai")[0];
+
+    expect(() =>
+      calculateTourBudget({
+        selectedShows,
+        originRegionId: "kansai",
+        tripOverrides: {
+          [trip.id]: { mode: "car", carPartySize: 0 },
+        },
+      }),
+    ).toThrow(/carPartySize/);
   });
 
   it("does not offer car travel between Hokkaido and mainland Japan", () => {

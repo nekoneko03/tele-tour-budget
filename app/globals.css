@@ -125,6 +125,26 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 .field input:hover, .field select:hover { border-color: var(--blue); }
+.field small { color: var(--muted); font-size: .72rem; font-weight: 620; line-height: 1.5; }
+.price-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.price-facts p {
+  display: grid;
+  gap: 4px;
+  min-height: 82px;
+  margin: 0;
+  padding: 15px 17px;
+  border-radius: 18px 18px 18px 6px;
+  color: var(--muted);
+  background: var(--tonal);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.price-facts p:nth-child(2) { border-radius: 18px 6px 18px 18px; background: var(--cyan-surface); }
+.price-facts strong { align-self: end; color: var(--ink); font-size: 1.05rem; font-weight: 880; }
 .button-row, .status-summary { display: flex; flex-wrap: wrap; gap: 8px; }
 .text-button, .primary-button, .mode-button {
   min-height: 44px;
@@ -194,8 +214,32 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
 .mode-button.is-selected small { color: rgb(255 255 255 / 78%); }
 .mode-button:disabled { cursor: not-allowed; opacity: .46; }
 .compact-field { width: min(100%, 220px); }
+.car-party-field { margin-top: 12px; }
 .estimate-note, .warning-note, .source-note, .disclaimer, .share-status { color: var(--muted); font-size: .78rem; line-height: 1.55; }
 .estimate-note { margin: 14px 0 0; }
+.trip-breakdown {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border: 1px solid rgb(49 93 168 / 14%);
+  border-radius: 18px 18px 18px 6px;
+  background: color-mix(in srgb, var(--high) 84%, transparent);
+}
+.trip-breakdown div {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.trip-breakdown dt { color: var(--muted); font-size: .78rem; }
+.trip-breakdown dd { margin: 0; font-size: .84rem; font-weight: 810; white-space: nowrap; }
+.trip-breakdown .trip-breakdown-total {
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.trip-breakdown-total dt, .trip-breakdown-total dd { color: var(--ink); font-size: .95rem; font-weight: 900; }
 
 .summary-panel {
   position: sticky;
@@ -243,7 +287,7 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
   .hero h1 { font-size: clamp(2.25rem, 13vw, 3.7rem); }
   .panel { padding: 20px 16px; border-radius: 26px 26px 26px 8px; }
   .section-heading, .trip-card-heading { align-items: flex-start; flex-direction: column; }
-  .field-grid, .show-list, .mode-buttons { grid-template-columns: 1fr; }
+  .field-grid, .price-facts, .show-list, .mode-buttons { grid-template-columns: 1fr; }
   .show-option { min-height: 94px; }
   .mode-button { min-height: 58px; }
   .trip-subtotal { align-self: auto; }

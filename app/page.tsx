@@ -6,11 +6,12 @@ import {
   officialSourceUrl,
   regions,
   shows,
-  ticketPriceStatusLabels,
   venues,
   type RegionId,
 } from "../lib/data";
 import {
+  DRINK_FEE_PER_SHOW,
+  TICKET_AND_FEE_PER_SHOW,
   calculateTourBudget,
   groupSelectedShowsIntoTrips,
   type TransportMode,
@@ -49,10 +50,7 @@ export default function Home() {
   const [selectedShowIds, setSelectedShowIds] = useState<Set<string>>(
     () => new Set(),
   );
-  const [drinkFeePerShow, setDrinkFeePerShow] = useState(600);
-  const [userFeePerShow, setUserFeePerShow] = useState(0);
   const [hotelNightlyRate, setHotelNightlyRate] = useState(8_000);
-  const [carPartySize, setCarPartySize] = useState(1);
   const [tripOverrides, setTripOverrides] = useState<
     Record<string, TripOverride | undefined>
   >({});
@@ -73,19 +71,24 @@ export default function Home() {
       );
     }
 
-    setDrinkFeePerShow(safeNumber(params.get("drink"), 600));
-    setUserFeePerShow(safeNumber(params.get("fee"), 0));
     setHotelNightlyRate(safeNumber(params.get("hotel"), 8_000));
-    setCarPartySize(safeNumber(params.get("party"), 1, true));
 
     const parsedOverrides: Record<string, TripOverride> = {};
     for (const entry of params.getAll("trip")) {
-      const [tripId, mode, nights] = entry.split("|");
+      const [tripId, mode, nights, carPartySize] = entry.split("|");
       if (!tripId || !validModes.has(mode as TransportMode)) continue;
       const parsedNights = safeNumber(nights ?? null, Number.NaN);
+      const parsedCarPartySize = safeNumber(
+        carPartySize ?? null,
+        Number.NaN,
+        true,
+      );
       parsedOverrides[tripId] = {
         mode: mode as TransportMode,
         ...(Number.isFinite(parsedNights) ? { nights: parsedNights } : {}),
+        ...(Number.isFinite(parsedCarPartySize)
+          ? { carPartySize: parsedCarPartySize }
+          : {}),
       };
     }
     setTripOverrides(parsedOverrides);
@@ -112,6 +115,11 @@ export default function Home() {
       safeOverrides[trip.id] = {
         ...(modeIsAvailable ? { mode: override.mode } : {}),
         ...(override.nights !== undefined ? { nights: override.nights } : {}),
+        ...(override.carPartySize !== undefined &&
+        Number.isInteger(override.carPartySize) &&
+        override.carPartySize >= 1
+          ? { carPartySize: override.carPartySize }
+          : {}),
       };
     }
     return safeOverrides;
@@ -121,20 +129,14 @@ export default function Home() {
       calculateTourBudget({
         selectedShows,
         originRegionId,
-        drinkFeePerShow,
-        userFeePerShow,
         hotelNightlyRate,
-        carPartySize,
         tripOverrides: effectiveTripOverrides,
       }),
     [
-      carPartySize,
-      drinkFeePerShow,
       hotelNightlyRate,
       originRegionId,
       selectedShows,
       effectiveTripOverrides,
-      userFeePerShow,
     ],
   );
 
@@ -158,17 +160,18 @@ export default function Home() {
     const params = new URLSearchParams();
     params.set("region", originRegionId);
     params.set("shows", selectedShows.map((show) => show.id).join(","));
-    params.set("drink", String(drinkFeePerShow));
-    params.set("fee", String(userFeePerShow));
     params.set("hotel", String(hotelNightlyRate));
-    params.set("party", String(carPartySize));
 
     for (const trip of availableTrips) {
       const override = effectiveTripOverrides[trip.id];
       const mode = override?.mode ?? trip.recommendedMode;
       const route = trip.routeOptions.find((option) => option.mode === mode);
       const nights = override?.nights ?? route?.nights;
-      params.append("trip", `${trip.id}|${mode}|${nights ?? ""}`);
+      const carPartySize = override?.carPartySize ?? 1;
+      params.append(
+        "trip",
+        `${trip.id}|${mode}|${nights ?? ""}|${carPartySize}`,
+      );
     }
 
     const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
@@ -221,30 +224,16 @@ export default function Home() {
                   からの往復です。
                 </small>
               </label>
-              <label className="field">
-                <span>未確定会場のドリンク代 / 公演</span>
-                <input
-                  type="number"
-                  min="0"
-                  inputMode="numeric"
-                  value={drinkFeePerShow}
-                  onChange={(event) =>
-                    setDrinkFeePerShow(safeNumber(event.target.value, 0))
-                  }
-                />
-              </label>
-              <label className="field">
-                <span>手数料 / 公演</span>
-                <input
-                  type="number"
-                  min="0"
-                  inputMode="numeric"
-                  value={userFeePerShow}
-                  onChange={(event) =>
-                    setUserFeePerShow(safeNumber(event.target.value, 0))
-                  }
-                />
-              </label>
+              <div className="price-facts field-wide" aria-label="固定費用">
+                <p>
+                  <span>チケット＋手数料</span>
+                  <strong>{yen(TICKET_AND_FEE_PER_SHOW)} / 公演</strong>
+                </p>
+                <p>
+                  <span>ドリンク</span>
+                  <strong>{yen(DRINK_FEE_PER_SHOW)} / 公演</strong>
+                </p>
+              </div>
               <label className="field">
                 <span>ホテル代 / 泊</span>
                 <input
@@ -254,19 +243,6 @@ export default function Home() {
                   value={hotelNightlyRate}
                   onChange={(event) =>
                     setHotelNightlyRate(safeNumber(event.target.value, 0))
-                  }
-                />
-              </label>
-              <label className="field">
-                <span>車の費用を割る人数</span>
-                <input
-                  type="number"
-                  min="1"
-                  step="1"
-                  inputMode="numeric"
-                  value={carPartySize}
-                  onChange={(event) =>
-                    setCarPartySize(safeNumber(event.target.value, 1, true))
                   }
                 />
               </label>
@@ -322,11 +298,11 @@ export default function Home() {
                       {"day" in show && show.day ? ` Day ${show.day}` : ""}
                     </span>
                     <span
-                      className={`status-badge status-${show.ticketPriceStatus}`}
+                      className="show-price"
+                      title="チケット・手数料・ドリンクの固定概算"
                     >
-                      {ticketPriceStatusLabels[show.ticketPriceStatus]}
+                      概算 {yen(TICKET_AND_FEE_PER_SHOW + DRINK_FEE_PER_SHOW)}
                     </span>
-                    <span className="show-price">{yen(show.ticketPrice)}</span>
                   </label>
                 );
               })}
@@ -343,7 +319,17 @@ export default function Home() {
               </div>
               <div className="trip-list">
                 {budget.trips.map(
-                  ({ trip, mode, nights, transportCost, lodgingCost }) => {
+                  ({
+                    trip,
+                    mode,
+                    ticketAndFee,
+                    drink,
+                    transportCost,
+                    nights,
+                    lodgingCost,
+                    total,
+                    carPartySize,
+                  }) => {
                     const chosenRoute = trip.routeOptions.find(
                       (option) => option.mode === mode,
                     );
@@ -362,7 +348,7 @@ export default function Home() {
                             </p>
                           </div>
                           <span className="trip-subtotal">
-                            {yen(transportCost + lodgingCost)}
+                            {yen(total)}
                           </span>
                         </div>
                         <div
@@ -409,6 +395,29 @@ export default function Home() {
                             ))}
                           </select>
                         </label>
+                        {mode === "car" && (
+                          <label className="field compact-field car-party-field">
+                            <span>車の費用を割る人数</span>
+                            <input
+                              type="number"
+                              min="1"
+                              step="1"
+                              inputMode="numeric"
+                              value={carPartySize}
+                              aria-label={`${trip.city}遠征で車の費用を割る人数`}
+                              onChange={(event) =>
+                                updateTrip(trip.id, {
+                                  carPartySize: safeNumber(
+                                    event.target.value,
+                                    1,
+                                    true,
+                                  ),
+                                })
+                              }
+                            />
+                            <small>この遠征の車代だけを人数で割ります。</small>
+                          </label>
+                        )}
                         {chosenRoute && (
                           <p className="estimate-note">
                             おすすめ：{modeLabels[trip.recommendedMode]}。選択中の
@@ -421,6 +430,31 @@ export default function Home() {
                             {chosenRoute.minutes.max}分（最小・標準・最大）。ライブ運賃ではない概算です。
                           </p>
                         )}
+                        <dl
+                          className="trip-breakdown"
+                          aria-label={`${trip.city}遠征の費用内訳`}
+                        >
+                          <div>
+                            <dt>チケット＋手数料</dt>
+                            <dd>{yen(ticketAndFee)}</dd>
+                          </div>
+                          <div>
+                            <dt>ドリンク</dt>
+                            <dd>{yen(drink)}</dd>
+                          </div>
+                          <div>
+                            <dt>交通費</dt>
+                            <dd>{yen(transportCost)}</dd>
+                          </div>
+                          <div>
+                            <dt>宿泊費</dt>
+                            <dd>{yen(lodgingCost)}</dd>
+                          </div>
+                          <div className="trip-breakdown-total">
+                            <dt>遠征小計</dt>
+                            <dd>{yen(total)}</dd>
+                          </div>
+                        </dl>
                       </article>
                     );
                   },
@@ -439,16 +473,12 @@ export default function Home() {
           </p>
           <dl className="breakdown-list">
             <div>
-              <dt>チケット</dt>
-              <dd>{yen(budget.ticketBase)}</dd>
+              <dt>チケット＋手数料</dt>
+              <dd>{yen(budget.ticketAndFee)}</dd>
             </div>
             <div>
               <dt>ドリンク</dt>
               <dd>{yen(budget.drink)}</dd>
-            </div>
-            <div>
-              <dt>手数料</dt>
-              <dd>{yen(budget.userFee)}</dd>
             </div>
             <div>
               <dt>交通</dt>
@@ -459,19 +489,6 @@ export default function Home() {
               <dd>{yen(budget.lodging)}</dd>
             </div>
           </dl>
-          <div className="status-summary">
-            <span className="status-badge status-confirmed">
-              確定 {budget.ticketStatusCounts.confirmed}公演
-            </span>
-            <span className="status-badge status-provisional">
-              仮置き {budget.ticketStatusCounts.provisional}公演
-            </span>
-          </div>
-          {budget.hasProvisionalTickets && (
-            <p className="warning-note">
-              「仮置き」のチケット代は正式発表前の想定額です。
-            </p>
-          )}
           <button
             type="button"
             className="primary-button"

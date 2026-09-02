@@ -1,9 +1,4 @@
-import type {
-  RegionId,
-  TicketPriceStatus,
-  TourShow,
-  Venue,
-} from "./data";
+import type { RegionId, TourShow, Venue } from "./data";
 import { venues } from "./data";
 
 export type TransportMode = "rail" | "flight" | "overnight_bus" | "car";
@@ -37,36 +32,34 @@ export type TripOverride = {
   /** Round-trip cost before a car party split. */
   transportCost?: number;
   nights?: number;
+  /** Number of people sharing this trip's car cost. */
+  carPartySize?: number;
 };
 
 export type TourBudgetInput = {
   selectedShows: readonly TourShow[];
   originRegionId: RegionId;
-  drinkFeePerShow?: number;
-  userFeePerShow?: number;
   hotelNightlyRate?: number;
-  carPartySize?: number;
   tripOverrides?: Readonly<Record<string, TripOverride | undefined>>;
 };
 
 export type TripBudget = {
   trip: Trip;
   mode: TransportMode;
+  ticketAndFee: number;
+  drink: number;
   transportCost: number;
   nights: number;
   lodgingCost: number;
+  total: number;
+  carPartySize: number;
 };
-
-export type TicketStatusCounts = Record<TicketPriceStatus, number>;
 
 export type TourBudget = {
   showCount: number;
   tripCount: number;
-  ticketStatusCounts: TicketStatusCounts;
-  hasProvisionalTickets: boolean;
-  ticketBase: number;
+  ticketAndFee: number;
   drink: number;
-  userFee: number;
   transport: number;
   lodging: number;
   total: number;
@@ -79,6 +72,9 @@ const TRANSPORT_MODES: readonly TransportMode[] = [
   "overnight_bus",
   "car",
 ];
+
+export const TICKET_AND_FEE_PER_SHOW = 7_800;
+export const DRINK_FEE_PER_SHOW = 700;
 
 const MAINLAND_REGION_ORDER: readonly RegionId[] = [
   "hokkaido",
@@ -299,19 +295,10 @@ function positiveInteger(value: number, name: string): number {
 }
 
 export function calculateTourBudget(input: TourBudgetInput): TourBudget {
-  const drinkFeePerShow = nonNegative(
-    input.drinkFeePerShow ?? 600,
-    "drinkFeePerShow",
-  );
-  const userFeePerShow = nonNegative(
-    input.userFeePerShow ?? 0,
-    "userFeePerShow",
-  );
   const hotelNightlyRate = nonNegative(
     input.hotelNightlyRate ?? 8_000,
     "hotelNightlyRate",
   );
-  const carPartySize = positiveInteger(input.carPartySize ?? 1, "carPartySize");
   const trips = groupSelectedShowsIntoTrips(
     input.selectedShows,
     input.originRegionId,
@@ -329,54 +316,52 @@ export function calculateTourBudget(input: TourBudgetInput): TourBudget {
       override?.transportCost ?? route.cost.typical,
       "transportCost",
     );
+    const carPartySize = positiveInteger(
+      override?.carPartySize ?? 1,
+      `carPartySize (${trip.id})`,
+    );
     const transportCost =
       mode === "car" ? Math.round(routeCost / carPartySize) : routeCost;
     const nights = nonNegative(override?.nights ?? route.nights, "nights");
     const lodgingCost = Math.round(nights * hotelNightlyRate);
+    const ticketAndFee = trip.shows.length * TICKET_AND_FEE_PER_SHOW;
+    const drink = trip.shows.length * DRINK_FEE_PER_SHOW;
+    const total = ticketAndFee + drink + transportCost + lodgingCost;
 
-    return { trip, mode, transportCost, nights, lodgingCost };
+    return {
+      trip,
+      mode,
+      ticketAndFee,
+      drink,
+      transportCost,
+      nights,
+      lodgingCost,
+      total,
+      carPartySize,
+    };
   });
 
-  const ticketStatusCounts: TicketStatusCounts = {
-    confirmed: 0,
-    provisional: 0,
-  };
-  let ticketBase = 0;
-  for (const show of input.selectedShows) {
-    ticketBase += nonNegative(show.ticketPrice, "ticketPrice");
-    ticketStatusCounts[show.ticketPriceStatus] += 1;
-  }
-
   const showCount = input.selectedShows.length;
-  const drink = Math.round(
-    input.selectedShows.reduce(
-      (sum, show) =>
-        sum +
-        nonNegative(
-          show.drinkPrice ?? drinkFeePerShow,
-          `drinkPrice (${show.id})`,
-        ),
-      0,
-    ),
+  const ticketAndFee = tripBudgets.reduce(
+    (sum, trip) => sum + trip.ticketAndFee,
+    0,
   );
-  const userFee = Math.round(userFeePerShow * showCount);
+  const drink = tripBudgets.reduce((sum, trip) => sum + trip.drink, 0);
   const transport = tripBudgets.reduce(
     (sum, trip) => sum + trip.transportCost,
     0,
   );
   const lodging = tripBudgets.reduce((sum, trip) => sum + trip.lodgingCost, 0);
+  const total = tripBudgets.reduce((sum, trip) => sum + trip.total, 0);
 
   return {
     showCount,
     tripCount: trips.length,
-    ticketStatusCounts,
-    hasProvisionalTickets: ticketStatusCounts.provisional > 0,
-    ticketBase,
+    ticketAndFee,
     drink,
-    userFee,
     transport,
     lodging,
-    total: ticketBase + drink + userFee + transport + lodging,
+    total,
     trips: tripBudgets,
   };
 }
