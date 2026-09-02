@@ -76,7 +76,7 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
   letter-spacing: -.035em;
   line-height: 1.12;
 }
-.hero h1 { max-width: 14ch; font-size: clamp(2.35rem, 8vw, 5.5rem); text-wrap: balance; }
+.hero h1 { max-width: none; font-size: clamp(1.5rem, 7.5vw, 5rem); white-space: nowrap; }
 .eyebrow, .step-label {
   margin: 0 0 8px;
   color: var(--cyan);
@@ -284,7 +284,6 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
 @media (max-width: 680px) {
   .simulator-shell { padding: 16px 12px 72px; }
   .hero { padding: 28px 22px 34px; border-radius: 34px 34px 34px 10px; }
-  .hero h1 { font-size: clamp(2.25rem, 13vw, 3.7rem); }
   .panel { padding: 20px 16px; border-radius: 26px 26px 26px 8px; }
   .section-heading, .trip-card-heading { align-items: flex-start; flex-direction: column; }
   .field-grid, .price-facts, .show-list, .mode-buttons { grid-template-columns: 1fr; }
