@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import {
-  officialSourceUrl,
   regions,
   shows,
   venues,
@@ -186,8 +185,7 @@ export default function Home() {
   return (
     <main className="simulator-shell">
       <header className="hero">
-        <p className="eyebrow">Tele 2027 TOUR</p>
-        <h1>Tele遠征費シミュレーター</h1>
+        <h1>遠征費シミュレーター</h1>
         <p className="hero-copy">
           行きたい公演と移動方法を選んで、ツアー全体の概算を組み立てます。
         </p>
@@ -498,15 +496,6 @@ export default function Home() {
             この条件のURLをコピー
           </button>
           {shareStatus && <p className="share-status">{shareStatus}</p>}
-          <p className="source-note">
-            公演情報：
-            <a href={officialSourceUrl} target="_blank" rel="noreferrer">
-              Tele公式
-            </a>
-          </p>
-          <p className="disclaimer">
-            このシミュレーターは非公式です。交通費・所要時間・宿泊費は比較用の概算で、予約時の実額とは異なります。
-          </p>
         </aside>
       </div>
     </main>
