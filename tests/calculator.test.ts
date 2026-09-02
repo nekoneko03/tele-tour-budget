@@ -173,4 +173,35 @@ describe("tour budget calculator", () => {
 
     expect(car?.available).toBe(false);
   });
+
+  it("uses the Tokyo–Niigata Shinkansen round-trip estimate in both directions", () => {
+    const niigata = venues.find((venue) => venue.id === "niigata-lots");
+    const yokohama = venues.find((venue) => venue.id === "k-arena-yokohama");
+    if (!niigata || !yokohama) throw new Error("Missing venue fixture");
+
+    const outbound = generateRouteOptions("kanto", niigata).find(
+      (option) => option.mode === "rail",
+    );
+    const reverse = generateRouteOptions("koshinetsu", yokohama).find(
+      (option) => option.mode === "rail",
+    );
+
+    expect(outbound?.cost).toEqual({
+      min: 17_280,
+      typical: 21_600,
+      max: 25_920,
+    });
+    expect(reverse?.cost).toEqual(outbound?.cost);
+  });
+
+  it("keeps the generic rail estimate for other adjacent regions", () => {
+    const nagoya = venues.find((venue) => venue.id === "comtec-portbase");
+    if (!nagoya) throw new Error("Missing Nagoya venue fixture");
+
+    const rail = generateRouteOptions("kansai", nagoya).find(
+      (option) => option.mode === "rail",
+    );
+
+    expect(rail?.cost.typical).toBe(11_200);
+  });
 });

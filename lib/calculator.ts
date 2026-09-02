@@ -89,6 +89,15 @@ const MAINLAND_REGION_ORDER: readonly RegionId[] = [
   "kyushu",
 ];
 
+function regionPairKey(first: RegionId, second: RegionId): string {
+  return [first, second].sort().join(":");
+}
+
+const RAIL_ROUND_TRIP_TYPICAL_OVERRIDES: Readonly<Record<string, number>> = {
+  // Tokyo–Niigata Joetsu Shinkansen round trip (standard planning estimate).
+  [regionPairKey("kanto", "koshinetsu")]: 21_600,
+};
+
 const venueById = new Map<Venue["id"], Venue>(
   venues.map((venue): [Venue["id"], Venue] => [venue.id, venue]),
 );
@@ -137,7 +146,10 @@ export function generateRouteOptions(
     originRegionId !== destinationRegionId &&
     (originRegionId === "hokkaido" || destinationRegionId === "hokkaido");
 
-  const railTypicalCost = sameRegion ? 2_500 : 7_000 + distance * 4_200;
+  const railTypicalCost =
+    RAIL_ROUND_TRIP_TYPICAL_OVERRIDES[
+      regionPairKey(originRegionId, destinationRegionId)
+    ] ?? (sameRegion ? 2_500 : 7_000 + distance * 4_200);
   const railTypicalMinutes = sameRegion ? 60 : 120 + distance * 65;
   const rail = crossesOkinawa
     ? unavailable("rail")
