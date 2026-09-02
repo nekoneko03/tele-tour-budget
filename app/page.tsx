@@ -16,6 +16,7 @@ import {
   type TransportMode,
   type TripOverride,
 } from "../lib/calculator";
+import { buildShareUrl } from "../lib/share-url";
 
 const venueById = new Map(venues.map((venue) => [venue.id, venue]));
 const validShowIds = new Set<string>(shows.map((show) => show.id));
@@ -173,7 +174,11 @@ export default function Home() {
       );
     }
 
-    const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    const url = buildShareUrl(
+      params,
+      window.location.href,
+      process.env.NEXT_PUBLIC_SITE_URL,
+    );
     try {
       await navigator.clipboard.writeText(url);
       setShareStatus("URLをコピーしました");
