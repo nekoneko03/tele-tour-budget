@@ -217,6 +217,7 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
 .car-party-field { margin-top: 12px; }
 .estimate-note, .warning-note, .source-note, .disclaimer, .share-status { color: var(--muted); font-size: .78rem; line-height: 1.55; }
 .estimate-note { margin: 14px 0 0; }
+.rail-source-link { font-size: .72rem; margin-left: .6rem; white-space: nowrap; }
 .trip-breakdown {
   display: grid;
   gap: 7px;

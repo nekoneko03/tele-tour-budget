@@ -226,6 +226,9 @@ export default function Home() {
                   {originRegion ? `「${originRegion.hub}」` : ""}
                   からの往復です。
                 </small>
+                <small>
+                  鉄道は通常期・大人1名・普通車指定席（新幹線/特急区間）・割引なしの往復計画値です。
+                </small>
               </label>
               <div className="price-facts field-wide" aria-label="固定費用">
                 <p>
@@ -375,7 +378,9 @@ export default function Home() {
                               <span>{modeLabels[option.mode]}</span>
                               <small>
                                 {option.available
-                                  ? `${option.mode === trip.recommendedMode ? "おすすめ・" : ""}往復 ${yen(option.cost.min)}〜${yen(option.cost.typical)}〜${yen(option.cost.max)}`
+                                  ? option.mode === "rail"
+                                    ? `${option.mode === trip.recommendedMode ? "おすすめ・" : ""}往復計画値 ${yen(option.cost.typical)}`
+                                    : `${option.mode === trip.recommendedMode ? "おすすめ・" : ""}往復 ${yen(option.cost.min)}〜${yen(option.cost.typical)}〜${yen(option.cost.max)}`
                                   : "対象外"}
                               </small>
                             </button>
@@ -423,14 +428,38 @@ export default function Home() {
                         )}
                         {chosenRoute && (
                           <p className="estimate-note">
-                            おすすめ：{modeLabels[trip.recommendedMode]}。選択中の
-                            {modeLabels[mode]}は、往復交通費
-                            {yen(chosenRoute.cost.min)}〜
-                            {yen(chosenRoute.cost.typical)}〜
-                            {yen(chosenRoute.cost.max)}、所要時間
-                            {chosenRoute.minutes.min}〜
-                            {chosenRoute.minutes.typical}〜
-                            {chosenRoute.minutes.max}分（最小・標準・最大）。ライブ運賃ではない概算です。
+                            {mode === "rail" && chosenRoute.originStation ? (
+                              <>
+                                鉄道計画：{chosenRoute.originStation}→
+                                {chosenRoute.destinationStation}。{chosenRoute.routeSummary}
+                                往復 {yen(chosenRoute.cost.typical)}（通常期・大人1名・普通車指定席、新幹線/特急利用区間を含む・割引なし）、片道約{chosenRoute.minutes.typical}分。確認日：{chosenRoute.checkedAt}
+                                {chosenRoute.needsReview
+                                  ? "。2027年の購入額・時刻は要確認。"
+                                  : "。"}
+                                {chosenRoute.sourceUrls?.slice(0, 2).map((url, index) => (
+                                  <a
+                                    className="rail-source-link"
+                                    href={url}
+                                    key={url}
+                                    rel="noreferrer"
+                                    target="_blank"
+                                  >
+                                    {index === 0 ? "会場アクセス" : "運賃参考"}
+                                  </a>
+                                ))}
+                              </>
+                            ) : (
+                              <>
+                                おすすめ：{modeLabels[trip.recommendedMode]}。選択中の
+                                {modeLabels[mode]}は、往復交通費
+                                {yen(chosenRoute.cost.min)}〜
+                                {yen(chosenRoute.cost.typical)}〜
+                                {yen(chosenRoute.cost.max)}、所要時間
+                                {chosenRoute.minutes.min}〜
+                                {chosenRoute.minutes.typical}〜
+                                {chosenRoute.minutes.max}分（最小・標準・最大）。ライブ運賃ではない概算です。
+                              </>
+                            )}
                           </p>
                         )}
                         <dl

@@ -1,5 +1,6 @@
 import type { RegionId, TourShow, Venue } from "./data";
 import { venues } from "./data";
+import { getRailFare } from "./rail-fares";
 
 export type TransportMode = "rail" | "flight" | "overnight_bus" | "car";
 
@@ -15,6 +16,14 @@ export type RouteOption = {
   cost: EstimateRange;
   minutes: EstimateRange;
   nights: number;
+  /** Present for static rail planning entries only. */
+  originStation?: string;
+  destinationStation?: string;
+  routeSummary?: string;
+  checkedAt?: string;
+  needsReview?: boolean;
+  sourceUrls?: readonly string[];
+  notes?: string;
 };
 
 export type Trip = {
@@ -89,15 +98,6 @@ const MAINLAND_REGION_ORDER: readonly RegionId[] = [
   "kyushu",
 ];
 
-function regionPairKey(first: RegionId, second: RegionId): string {
-  return [first, second].sort().join(":");
-}
-
-const RAIL_ROUND_TRIP_TYPICAL_OVERRIDES: Readonly<Record<string, number>> = {
-  // Tokyo–Niigata Joetsu Shinkansen round trip (standard planning estimate).
-  [regionPairKey("kanto", "koshinetsu")]: 21_600,
-};
-
 const venueById = new Map<Venue["id"], Venue>(
   venues.map((venue): [Venue["id"], Venue] => [venue.id, venue]),
 );
@@ -146,19 +146,32 @@ export function generateRouteOptions(
     originRegionId !== destinationRegionId &&
     (originRegionId === "hokkaido" || destinationRegionId === "hokkaido");
 
-  const railTypicalCost =
-    RAIL_ROUND_TRIP_TYPICAL_OVERRIDES[
-      regionPairKey(originRegionId, destinationRegionId)
-    ] ?? (sameRegion ? 2_500 : 7_000 + distance * 4_200);
-  const railTypicalMinutes = sameRegion ? 60 : 120 + distance * 65;
-  const rail = crossesOkinawa
-    ? unavailable("rail")
-    : {
+  const railFare = getRailFare(originRegionId, venue.id);
+  const rail = railFare.available
+    ? {
         mode: "rail" as const,
         available: true,
-        cost: range(railTypicalCost, 0.2),
-        minutes: range(railTypicalMinutes, 0.15),
-        nights: distance >= 5 ? 1 : 0,
+        // A static planning value, rather than a live fare range.
+        cost: range(railFare.roundTripYen, 0),
+        minutes: range(railFare.oneWayMinutes, 0),
+        nights: railFare.oneWayMinutes >= 300 ? 1 : 0,
+        originStation: railFare.originStation,
+        destinationStation: railFare.destinationStation,
+        routeSummary: railFare.routeSummary,
+        checkedAt: railFare.checkedAt,
+        needsReview: railFare.needsReview,
+        sourceUrls: railFare.sourceUrls,
+        notes: railFare.notes,
+      }
+    : {
+        ...unavailable("rail"),
+        originStation: railFare.originStation,
+        destinationStation: railFare.destinationStation,
+        routeSummary: railFare.routeSummary,
+        checkedAt: railFare.checkedAt,
+        needsReview: railFare.needsReview,
+        sourceUrls: railFare.sourceUrls,
+        notes: railFare.notes,
       };
 
   const flightAvailable = crossesOkinawa || crossesHokkaido || distance >= 3;

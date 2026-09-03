@@ -1,0 +1,1985 @@
+[
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 33750,
+    "roundTripYen": 67500,
+    "oneWayMinutes": 515,
+    "routeSummary": "札幌→新函館北斗（特急北斗）→東京（北海道・東北新幹線）→横浜（東口から徒歩9分）",
+    "sourceUrls": [
+      "https://k-arena.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで横浜駅東口から徒歩9分を確認。通常期・大人・きっぷ運賃の代表経路。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 57350,
+    "roundTripYen": 114700,
+    "oneWayMinutes": 800,
+    "routeSummary": "札幌→新函館北斗→東京→博多（新幹線）→唐人町",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 51780,
+    "roundTripYen": 103560,
+    "oneWayMinutes": 670,
+    "routeSummary": "札幌→新函館北斗→東京→岡山（新幹線）→高松→瓦町",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 48200,
+    "roundTripYen": 96400,
+    "oneWayMinutes": 600,
+    "routeSummary": "札幌→新函館北斗→東京→新大阪→大阪・西九条→桜島",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/faq/38/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 250,
+    "roundTripYen": 500,
+    "oneWayMinutes": 12,
+    "routeSummary": "札幌→札幌市営地下鉄 中島公園",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "札幌市営地下鉄の市内移動。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 44470,
+    "roundTripYen": 88940,
+    "oneWayMinutes": 590,
+    "routeSummary": "札幌→新函館北斗→東京→新潟（上越新幹線）",
+    "sourceUrls": [
+      "https://www.lotswest.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 45020,
+    "roundTripYen": 90040,
+    "oneWayMinutes": 535,
+    "routeSummary": "札幌→新函館北斗→東京→名古屋→港区役所（名古屋市営地下鉄名港線、徒歩8分）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで名港線・港区役所駅2番出口から徒歩8分を確認。名古屋駅からの地下鉄きっぷ運賃を含む代表経路で、2027改定は要確認。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 64750,
+    "roundTripYen": 129500,
+    "oneWayMinutes": 875,
+    "routeSummary": "札幌→新函館北斗→東京→博多→熊本→通町筋",
+    "sourceUrls": [
+      "https://www.b9web.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場最寄りを通町筋に統一。熊本市電の通常大人運賃を含む代表経路。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 31500,
+    "roundTripYen": 63000,
+    "oneWayMinutes": 395,
+    "routeSummary": "札幌→新函館北斗→仙台→荒井",
+    "sourceUrls": [
+      "https://www.sendaigigs.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokkaido",
+    "originStation": "札幌",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 53420,
+    "roundTripYen": 106840,
+    "oneWayMinutes": 665,
+    "routeSummary": "札幌→新函館北斗→東京→広島→海岸通",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 11420,
+    "roundTripYen": 22840,
+    "oneWayMinutes": 150,
+    "routeSummary": "仙台→東京（東北新幹線）→横浜（東口から徒歩9分）",
+    "sourceUrls": [
+      "https://k-arena.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで横浜駅東口から徒歩9分を確認。通常期・大人・きっぷ運賃の代表経路。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 30000,
+    "roundTripYen": 60000,
+    "oneWayMinutes": 410,
+    "routeSummary": "仙台→東京（東北新幹線）→博多（東海道・山陽新幹線）→唐人町",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 29450,
+    "roundTripYen": 58900,
+    "oneWayMinutes": 365,
+    "routeSummary": "仙台→東京→岡山→高松→瓦町",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 25870,
+    "roundTripYen": 51740,
+    "oneWayMinutes": 290,
+    "routeSummary": "仙台→東京→新大阪→大阪・西九条→桜島",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/faq/38/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 26740,
+    "roundTripYen": 53480,
+    "oneWayMinutes": 365,
+    "routeSummary": "仙台→新函館北斗（北海道・東北新幹線）→札幌→中島公園",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 18330,
+    "roundTripYen": 36660,
+    "oneWayMinutes": 240,
+    "routeSummary": "仙台→大宮→新潟（新幹線）",
+    "sourceUrls": [
+      "https://www.lotswest.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 22690,
+    "roundTripYen": 45380,
+    "oneWayMinutes": 265,
+    "routeSummary": "仙台→東京→名古屋→港区役所（名古屋市営地下鉄名港線、徒歩8分）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで名港線・港区役所駅2番出口から徒歩8分を確認。名古屋駅からの地下鉄きっぷ運賃を含む代表経路で、2027改定は要確認。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 41000,
+    "roundTripYen": 82000,
+    "oneWayMinutes": 600,
+    "routeSummary": "仙台→東京→博多→熊本→通町筋",
+    "sourceUrls": [
+      "https://www.b9web.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場最寄りを通町筋に統一。熊本市電の通常大人運賃を含む代表経路。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 310,
+    "roundTripYen": 620,
+    "oneWayMinutes": 17,
+    "routeSummary": "仙台→仙台市地下鉄東西線 荒井",
+    "sourceUrls": [
+      "https://www.sendaigigs.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "仙台市地下鉄の市内移動。"
+  },
+  {
+    "originRegionId": "tohoku",
+    "originStation": "仙台",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 31090,
+    "roundTripYen": 62180,
+    "oneWayMinutes": 385,
+    "routeSummary": "仙台→東京→広島→海岸通",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 490,
+    "roundTripYen": 980,
+    "oneWayMinutes": 27,
+    "routeSummary": "JR東海道線等（東京→横浜）、横浜駅東口から徒歩9分",
+    "sourceUrls": [
+      "https://ekitan.com/d-norikae/transit/route/sf-2590/st-3260",
+      "https://k-arena.com/access/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "2026-09時点の通常期・大人・きっぷによる計画目安。会場公式は横浜駅東口から徒歩9分。2027年購入額・時刻は要確認。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 23910,
+    "roundTripYen": 47820,
+    "oneWayMinutes": 355,
+    "routeSummary": "東京→博多（東海道・山陽新幹線）→唐人町",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 18340,
+    "roundTripYen": 36680,
+    "oneWayMinutes": 285,
+    "routeSummary": "東京→岡山（新幹線）→高松→瓦町",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 14760,
+    "roundTripYen": 29520,
+    "oneWayMinutes": 205,
+    "routeSummary": "東京→新大阪（東海道新幹線）→大阪・西九条→桜島",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/faq/38/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 33690,
+    "roundTripYen": 67380,
+    "oneWayMinutes": 502,
+    "routeSummary": "東京→新函館北斗（北海道新幹線）→札幌（特急北斗）→中島公園",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 10780,
+    "roundTripYen": 21560,
+    "oneWayMinutes": 122,
+    "routeSummary": "東京→新潟（上越新幹線）",
+    "sourceUrls": [
+      "https://www.lotswest.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "JR東日本えきねっと掲載の通常期・普通車指定席10,780円を基準確認。会場は新潟駅から徒歩。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 11580,
+    "roundTripYen": 23160,
+    "oneWayMinutes": 140,
+    "routeSummary": "東京→名古屋（東海道新幹線）→港区役所（名古屋市営地下鉄名港線、徒歩8分）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで名港線・港区役所駅2番出口から徒歩8分を確認。名古屋駅からの地下鉄きっぷ運賃を含む代表経路で、2027改定は要確認。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 31310,
+    "roundTripYen": 62620,
+    "oneWayMinutes": 510,
+    "routeSummary": "東京→博多→熊本（新幹線）→通町筋",
+    "sourceUrls": [
+      "https://www.b9web.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場最寄りを通町筋に統一。熊本市電の通常大人運賃を含む代表経路。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 11420,
+    "roundTripYen": 22840,
+    "oneWayMinutes": 127,
+    "routeSummary": "東京→仙台（東北新幹線）→荒井",
+    "sourceUrls": [
+      "https://www.sendaigigs.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "kanto",
+    "originStation": "東京",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 19980,
+    "roundTripYen": 39960,
+    "oneWayMinutes": 280,
+    "routeSummary": "東京→広島（東海道・山陽新幹線）→海岸通",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 11090,
+    "roundTripYen": 22180,
+    "oneWayMinutes": 165,
+    "routeSummary": "新潟→東京（上越新幹線）→横浜（東口から徒歩9分）",
+    "sourceUrls": [
+      "https://k-arena.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで横浜駅東口から徒歩9分を確認。通常期・大人・きっぷ運賃の代表経路。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 34690,
+    "roundTripYen": 69380,
+    "oneWayMinutes": 477,
+    "routeSummary": "新潟→東京→博多（新幹線）→唐人町",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 29120,
+    "roundTripYen": 58240,
+    "oneWayMinutes": 407,
+    "routeSummary": "新潟→東京→岡山→高松→瓦町",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 25540,
+    "roundTripYen": 51080,
+    "oneWayMinutes": 327,
+    "routeSummary": "新潟→東京→新大阪→大阪・西九条→桜島",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/faq/38/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 44470,
+    "roundTripYen": 88940,
+    "oneWayMinutes": 590,
+    "routeSummary": "新潟→東京→新函館北斗→札幌→中島公園",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 0,
+    "roundTripYen": 0,
+    "oneWayMinutes": 15,
+    "routeSummary": "新潟駅から徒歩",
+    "sourceUrls": [
+      "https://www.lotswest.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "NIIGATA LOTS公式アクセスに基づく徒歩区間。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 22360,
+    "roundTripYen": 44720,
+    "oneWayMinutes": 262,
+    "routeSummary": "新潟→東京→名古屋→港区役所（名古屋市営地下鉄名港線、徒歩8分）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで名港線・港区役所駅2番出口から徒歩8分を確認。名古屋駅からの地下鉄きっぷ運賃を含む代表経路で、2027改定は要確認。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 42090,
+    "roundTripYen": 84180,
+    "oneWayMinutes": 632,
+    "routeSummary": "新潟→東京→博多→熊本→通町筋",
+    "sourceUrls": [
+      "https://www.b9web.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場最寄りを通町筋に統一。熊本市電の通常大人運賃を含む代表経路。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 22200,
+    "roundTripYen": 44400,
+    "oneWayMinutes": 257,
+    "routeSummary": "新潟→大宮→仙台→荒井",
+    "sourceUrls": [
+      "https://www.sendaigigs.com/access/",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "koshinetsu",
+    "originStation": "新潟",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 30760,
+    "roundTripYen": 61520,
+    "oneWayMinutes": 402,
+    "routeSummary": "新潟→東京→広島→海岸通",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.eki-net.com/top/tokudane/",
+      "https://transit.yahoo.co.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセスで最寄駅を確認。運賃・時間は通常期・大人・普通車指定席の代表経路として要出発時刻最終照合。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 14620,
+    "roundTripYen": 29240,
+    "oneWayMinutes": 214,
+    "routeSummary": "北陸新幹線（金沢→東京）・JR在来線（東京→横浜）、横浜駅から徒歩",
+    "sourceUrls": [
+      "https://www.jorudan.co.jp/norikae/route/%E9%87%91%E6%B2%A2_%E6%A8%AA%E6%B5%9C.html",
+      "https://k-arena.com/access/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "通常期・普通車指定席。会場公式は横浜駅東口徒歩9分。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 21310,
+    "roundTripYen": 42620,
+    "oneWayMinutes": 326,
+    "routeSummary": "北陸新幹線・特急サンダーバード・東海道/山陽新幹線（金沢→敦賀→京都→博多）・福岡市地下鉄（博多→唐人町）",
+    "sourceUrls": [
+      "https://transit.yahoo.co.jp/search/result?all=1&expkind=1&from=%E9%87%91%E6%B2%A2&s=0&ticket=ic&to=%E5%8D%9A%E5%A4%9A&ws=3",
+      "https://www.zepp.co.jp/hall/fukuoka/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "博多→唐人町の地下鉄運賃を含む。日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 16020,
+    "roundTripYen": 32040,
+    "oneWayMinutes": 292,
+    "routeSummary": "北陸新幹線・特急・山陽新幹線・JR瀬戸大橋線（金沢→敦賀→京都→岡山→高松）・ことでん（高松築港→瓦町）",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通常期指定席として要日付再照合。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 9690,
+    "roundTripYen": 19380,
+    "oneWayMinutes": 173,
+    "routeSummary": "北陸新幹線・特急サンダーバード（金沢→敦賀→大阪）・JRゆめ咲線（大阪→桜島）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/osakabayside/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通常期指定席として要日付再照合。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 31900,
+    "roundTripYen": 63800,
+    "oneWayMinutes": 600,
+    "routeSummary": "北陸・上越・東北/北海道新幹線およびJR（⾦沢→東京→新函館北斗→札幌）・札幌市営地下鉄",
+    "sourceUrls": [
+      "https://ekitan.com/d-norikae/transit/route/sf-6223/st-200",
+      "https://www.zepp.co.jp/hall/sapporo/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみで到達可能。接続・指定席額は要日付再照合。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 19510,
+    "roundTripYen": 39020,
+    "oneWayMinutes": 354,
+    "routeSummary": "北陸/上越新幹線・JR（金沢→東京→新潟）、新潟駅から徒歩",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は新潟駅から徒歩15分。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 10440,
+    "roundTripYen": 20880,
+    "oneWayMinutes": 171,
+    "routeSummary": "北陸新幹線・特急しらさぎ（金沢→敦賀→名古屋）・JR/名古屋市営地下鉄（名古屋→金山→港区役所）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://transit.yahoo.co.jp/search/result?all=1&from=%E5%90%8D%E5%8F%A4%E5%B1%8B&stype=&to=%E6%B8%AF%E5%8C%BA%E5%BD%B9%E6%89%80"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は港区役所駅2番出口から徒歩8分。名古屋→港区役所はきっぷ420円（JR180円+地下鉄240円）。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 23410,
+    "roundTripYen": 46820,
+    "oneWayMinutes": 391,
+    "routeSummary": "北陸新幹線・特急・山陽/九州新幹線（金沢→敦賀→京都→博多→熊本）・熊本市電",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000KB91_001pa/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。通町筋は第三者会場情報による。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 23520,
+    "roundTripYen": 47040,
+    "oneWayMinutes": 356,
+    "routeSummary": "北陸・東北新幹線（金沢→東京→仙台）・仙台市地下鉄東西線（仙台→荒井）",
+    "sourceUrls": [
+      "https://www.diskgarage.com/support/map/detail/no002341"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。荒井駅案内は主催者会場情報。"
+  },
+  {
+    "originRegionId": "hokuriku",
+    "originStation": "金沢",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 16620,
+    "roundTripYen": 33240,
+    "oneWayMinutes": 267,
+    "routeSummary": "北陸新幹線・特急・山陽新幹線（金沢→敦賀→京都→広島）・広島電鉄（広島→海岸通）",
+    "sourceUrls": [
+      "https://bluelive.jp/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "広島電鉄運賃を含む。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 10810,
+    "roundTripYen": 21620,
+    "oneWayMinutes": 100,
+    "routeSummary": "東海道新幹線（名古屋→新横浜）・JR横浜線（新横浜→横浜）、横浜駅から徒歩",
+    "sourceUrls": [
+      "https://ekitan.com/transit/article/shinkansen/section/sf-4455_st-2370",
+      "https://k-arena.com/access/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "名古屋→新横浜指定席10,640円を基礎にした要再照合値。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 17970,
+    "roundTripYen": 35940,
+    "oneWayMinutes": 214,
+    "routeSummary": "東海道/山陽新幹線（名古屋→博多）・福岡市地下鉄（博多→唐人町）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 13650,
+    "roundTripYen": 27300,
+    "oneWayMinutes": 177,
+    "routeSummary": "東海道/山陽新幹線・JR瀬戸大橋線（名古屋→岡山→高松）・ことでん",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 7090,
+    "roundTripYen": 14180,
+    "oneWayMinutes": 93,
+    "routeSummary": "東海道新幹線（名古屋→新大阪）・JR（新大阪→大阪→西九条→桜島）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/osakabayside/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 33470,
+    "roundTripYen": 66940,
+    "oneWayMinutes": 637,
+    "routeSummary": "東海道・東北/北海道新幹線およびJR（名古屋→東京→新函館北斗→札幌）・札幌市営地下鉄",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみで到達可能。接続・指定席額は要日付再照合。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 18510,
+    "roundTripYen": 37020,
+    "oneWayMinutes": 295,
+    "routeSummary": "東海道/上越新幹線（名古屋→東京→新潟）、新潟駅から徒歩",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は新潟駅から徒歩15分。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 420,
+    "roundTripYen": 840,
+    "oneWayMinutes": 22,
+    "routeSummary": "JR東海道本線（名古屋→金山）・名古屋市営地下鉄名港線（金山→港区役所）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://transit.yahoo.co.jp/search/result?all=1&from=%E5%90%8D%E5%8F%A4%E5%B1%8B&stype=&to=%E6%B8%AF%E5%8C%BA%E5%BD%B9%E6%89%80"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "Yahoo!路線情報で、きっぷ420円・22分（JR180円+地下鉄240円）を確認。会場公式は港区役所駅2番出口から徒歩8分。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 21940,
+    "roundTripYen": 43880,
+    "oneWayMinutes": 278,
+    "routeSummary": "東海道/山陽/九州新幹線（名古屋→博多→熊本）・熊本市電",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000KB91_001pa/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 24430,
+    "roundTripYen": 48860,
+    "oneWayMinutes": 307,
+    "routeSummary": "東海道・東北新幹線（名古屋→東京→仙台）・仙台市地下鉄東西線",
+    "sourceUrls": [
+      "https://www.diskgarage.com/support/map/detail/no002341"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "tokai",
+    "originStation": "名古屋",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 14720,
+    "roundTripYen": 29440,
+    "oneWayMinutes": 167,
+    "routeSummary": "東海道/山陽新幹線（名古屋→広島）・広島電鉄",
+    "sourceUrls": [
+      "https://bluelive.jp/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "広島電鉄運賃を含む。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 13940,
+    "roundTripYen": 27880,
+    "oneWayMinutes": 185,
+    "routeSummary": "JR（大阪→新大阪）・東海道新幹線（新大阪→新横浜）・JR横浜線（→横浜）、徒歩",
+    "sourceUrls": [
+      "https://k-arena.com/access/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 15180,
+    "roundTripYen": 30360,
+    "oneWayMinutes": 170,
+    "routeSummary": "JR（大阪→新大阪）・山陽新幹線（→博多）・福岡市地下鉄",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 8210,
+    "roundTripYen": 16420,
+    "oneWayMinutes": 130,
+    "routeSummary": "JR（大阪→新大阪）・山陽新幹線・JR瀬戸大橋線（→高松）・ことでん",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 200,
+    "roundTripYen": 400,
+    "oneWayMinutes": 14,
+    "routeSummary": "JR大阪環状線・ゆめ咲線（大阪→西九条→桜島）",
+    "sourceUrls": [
+      "https://roote.ekispert.net/result/print?action=result&arr=%E6%A1%9C%E5%B3%B6&arr_code=25949&connect=true&controller=transfer&dep=%E5%A4%A7%E9%98%AA&dep_code=25853",
+      "https://www.zepp.co.jp/hall/osakabayside/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "駅すぱあと検索結果：200円・14分。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 35430,
+    "roundTripYen": 70860,
+    "oneWayMinutes": 690,
+    "routeSummary": "JR・東海道/東北/北海道新幹線（大阪→新大阪→東京→新函館北斗→札幌）・札幌市営地下鉄",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみで到達可能。接続・指定席額は要日付再照合。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 22670,
+    "roundTripYen": 45340,
+    "oneWayMinutes": 365,
+    "routeSummary": "JR・東海道/上越新幹線（大阪→新大阪→東京→新潟）、徒歩",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 7100,
+    "roundTripYen": 14200,
+    "oneWayMinutes": 100,
+    "routeSummary": "JR（大阪→新大阪）・東海道新幹線（→名古屋）・JR/名古屋市営地下鉄（名古屋→金山→港区役所）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://transit.yahoo.co.jp/search/result?all=1&from=%E5%90%8D%E5%8F%A4%E5%B1%8B&stype=&to=%E6%B8%AF%E5%8C%BA%E5%BD%B9%E6%89%80"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は港区役所駅2番出口から徒歩8分。名古屋側のきっぷ420円へ統一。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 18700,
+    "roundTripYen": 37400,
+    "oneWayMinutes": 240,
+    "routeSummary": "JR（大阪→新大阪）・山陽/九州新幹線（→熊本）・熊本市電",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000KB91_001pa/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 28310,
+    "roundTripYen": 56620,
+    "oneWayMinutes": 360,
+    "routeSummary": "JR・東海道/東北新幹線（大阪→新大阪→東京→仙台）・仙台市地下鉄",
+    "sourceUrls": [
+      "https://www.diskgarage.com/support/map/detail/no002341"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "kansai",
+    "originStation": "大阪",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 10620,
+    "roundTripYen": 21240,
+    "oneWayMinutes": 105,
+    "routeSummary": "JR（大阪→新大阪）・山陽新幹線（→広島）・広島電鉄",
+    "sourceUrls": [
+      "https://bluelive.jp/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "広島電鉄運賃を含む。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 18050,
+    "roundTripYen": 36100,
+    "oneWayMinutes": 231,
+    "routeSummary": "山陽新幹線（広島→新横浜）・JR横浜線（新横浜→横浜）、徒歩",
+    "sourceUrls": [
+      "https://ekitan.com/transit/fare/sf-6858/st-3260",
+      "https://k-arena.com/access/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "駅探：18,050円・3時間49分（指定席種別は日付再確認推奨）。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 9870,
+    "roundTripYen": 19740,
+    "oneWayMinutes": 70,
+    "routeSummary": "山陽新幹線（広島→博多）・福岡市地下鉄",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 8030,
+    "roundTripYen": 16060,
+    "oneWayMinutes": 130,
+    "routeSummary": "山陽新幹線・JR瀬戸大橋線（広島→岡山→高松）・ことでん",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 10800,
+    "roundTripYen": 21600,
+    "oneWayMinutes": 120,
+    "routeSummary": "山陽新幹線（広島→新大阪）・JR（新大阪→大阪→西九条→桜島）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/osakabayside/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 39420,
+    "roundTripYen": 78840,
+    "oneWayMinutes": 750,
+    "routeSummary": "山陽・東海道・東北/北海道新幹線およびJR（広島→東京→新函館北斗→札幌）・札幌市営地下鉄",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみで到達可能。接続・指定席額は要日付再照合。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 28030,
+    "roundTripYen": 56060,
+    "oneWayMinutes": 430,
+    "routeSummary": "山陽・東海道/上越新幹線（広島→東京→新潟）、徒歩",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "日付指定で要再照合。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 14820,
+    "roundTripYen": 29640,
+    "oneWayMinutes": 180,
+    "routeSummary": "山陽新幹線（広島→名古屋）・JR/名古屋市営地下鉄（名古屋→金山→港区役所）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://transit.yahoo.co.jp/search/result?all=1&from=%E5%90%8D%E5%8F%A4%E5%B1%8B&stype=&to=%E6%B8%AF%E5%8C%BA%E5%BD%B9%E6%89%80"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は港区役所駅2番出口から徒歩8分。名古屋側のきっぷ420円へ統一。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 12520,
+    "roundTripYen": 25040,
+    "oneWayMinutes": 130,
+    "routeSummary": "山陽/九州新幹線（広島→熊本）・熊本市電",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000KB91_001pa/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 32310,
+    "roundTripYen": 64620,
+    "oneWayMinutes": 420,
+    "routeSummary": "山陽・東海道・東北新幹線（広島→東京→仙台）・仙台市地下鉄",
+    "sourceUrls": [
+      "https://www.diskgarage.com/support/map/detail/no002341"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式アクセス未確認。"
+  },
+  {
+    "originRegionId": "chugoku",
+    "originStation": "広島",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 240,
+    "roundTripYen": 480,
+    "oneWayMinutes": 25,
+    "routeSummary": "広島電鉄5号線（広島駅→海岸通）、徒歩",
+    "sourceUrls": [
+      "https://bluelive.jp/access"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は広島駅から市内電車約25分。運賃は要再照合。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 18790,
+    "roundTripYen": 37580,
+    "oneWayMinutes": 315,
+    "routeSummary": "JR高松→岡山（快速マリンライナー）→新横浜（山陽・東海道新幹線）→横浜（JR横浜線）",
+    "sourceUrls": [
+      "https://k-arena.com/access/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式が徒歩9分とする横浜駅をcanonical到着駅に採用。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 17400,
+    "roundTripYen": 34800,
+    "oneWayMinutes": 210,
+    "routeSummary": "JR高松→岡山（快速）→博多（山陽新幹線）→唐人町（福岡市地下鉄）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 200,
+    "roundTripYen": 400,
+    "oneWayMinutes": 4,
+    "routeSummary": "高松築港→瓦町（高松琴平電気鉄道）",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.kotoden.co.jp/publichtm/kotoden/time/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "JR高松駅から高松築港駅は徒歩連絡（運賃外）。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 8400,
+    "roundTripYen": 16800,
+    "oneWayMinutes": 150,
+    "routeSummary": "JR高松→岡山（快速）→新大阪（山陽新幹線）→桜島（大阪環状線・JRゆめ咲線）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/osakabayside/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 40160,
+    "roundTripYen": 80320,
+    "oneWayMinutes": 800,
+    "routeSummary": "JR高松→岡山→東京（新幹線）→新函館北斗（北海道新幹線）→札幌（特急北斗）→中島公園（札幌市営地下鉄）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.jrhokkaido.co.jp/train/tr003_01.html",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみの代表経路。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 29550,
+    "roundTripYen": 59100,
+    "oneWayMinutes": 455,
+    "routeSummary": "JR高松→岡山→東京（新幹線）→新潟（上越新幹線）",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access",
+      "https://ekitan.com/transit/shinkansen/section/sf-2590/st-3654",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式のJR最寄駅は新潟駅（徒歩15分）。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 15110,
+    "roundTripYen": 30220,
+    "oneWayMinutes": 245,
+    "routeSummary": "JR高松→岡山（快速）→名古屋（山陽・東海道新幹線）→港区役所（名古屋市営地下鉄東山線・名港線）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は港区役所駅2番出口から徒歩8分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 18630,
+    "roundTripYen": 37260,
+    "oneWayMinutes": 250,
+    "routeSummary": "JR高松→岡山（快速）→熊本（山陽・九州新幹線）→通町筋（熊本市電）",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000DRB9_001pa/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通町筋から徒歩約5分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 30370,
+    "roundTripYen": 60740,
+    "oneWayMinutes": 410,
+    "routeSummary": "JR高松→岡山→東京（新幹線）→仙台（東北新幹線）→荒井（仙台市地下鉄東西線）",
+    "sourceUrls": [
+      "https://www.gip-web.co.jp/hall",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "仙台GIGSの最寄りは荒井駅。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "shikoku",
+    "originStation": "高松駅",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 8270,
+    "roundTripYen": 16540,
+    "oneWayMinutes": 155,
+    "routeSummary": "JR高松→岡山（快速）→広島（山陽新幹線）→海岸通（広島電鉄5号線）",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "海岸通から徒歩約5分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": true,
+    "oneWayYen": 23480,
+    "roundTripYen": 46960,
+    "oneWayMinutes": 300,
+    "routeSummary": "博多→新横浜（山陽・東海道新幹線）→横浜（JR横浜線）",
+    "sourceUrls": [
+      "https://k-arena.com/access/",
+      "https://ekitan.com/transit/shinkansen/section/sf-7930/st-2370"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式が徒歩9分とする横浜駅をcanonical到着駅に採用。博多→新横浜の通常期指定席は23,480円。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": true,
+    "oneWayYen": 260,
+    "roundTripYen": 520,
+    "oneWayMinutes": 11,
+    "routeSummary": "博多→唐人町（福岡市地下鉄空港線）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/fukuoka/",
+      "https://subway.city.fukuoka.lg.jp/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "きっぷ運賃260円。唐人町駅から徒歩約15分。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": true,
+    "oneWayYen": 17180,
+    "roundTripYen": 34360,
+    "oneWayMinutes": 210,
+    "routeSummary": "博多→岡山（山陽新幹線）→高松（快速マリンライナー）→瓦町（高松琴平電気鉄道）",
+    "sourceUrls": [
+      "https://festhalle.jp/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html",
+      "https://www.jr-odekake.net/ticket/guide/ebook/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "高松駅から高松築港駅は徒歩連絡（運賃外）。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": true,
+    "oneWayYen": 16060,
+    "roundTripYen": 32120,
+    "oneWayMinutes": 180,
+    "routeSummary": "博多→新大阪（山陽新幹線）→桜島（大阪環状線・JRゆめ咲線）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/osakabayside/",
+      "https://www.jrkyushu-kippu.jp/fare/ticket/322"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": true,
+    "oneWayYen": 47570,
+    "roundTripYen": 95140,
+    "oneWayMinutes": 860,
+    "routeSummary": "博多→東京（山陽・東海道新幹線）→新函館北斗（北海道新幹線）→札幌（特急北斗）→中島公園（札幌市営地下鉄）",
+    "sourceUrls": [
+      "https://www.zepp.co.jp/hall/sapporo/",
+      "https://www.jrhokkaido.co.jp/train/tr003_01.html",
+      "https://ekitan.com/transit/fare/sf-85/st-200"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "鉄道のみの代表経路。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": true,
+    "oneWayYen": 34370,
+    "roundTripYen": 68740,
+    "oneWayMinutes": 410,
+    "routeSummary": "博多→東京（山陽・東海道新幹線）→新潟（上越新幹線）",
+    "sourceUrls": [
+      "https://www.fmniigata.com/lots/access",
+      "https://www.jrkyushu-kippu.jp/fare/ticket/322",
+      "https://ekitan.com/transit/shinkansen/section/sf-2590/st-3654"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式のJR最寄駅は新潟駅（徒歩15分）。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": true,
+    "oneWayYen": 18820,
+    "roundTripYen": 37640,
+    "oneWayMinutes": 240,
+    "routeSummary": "博多→名古屋（山陽・東海道新幹線）→港区役所（名古屋市営地下鉄東山線・名港線）",
+    "sourceUrls": [
+      "https://portbase.co.jp/access/",
+      "https://www.jrkyushu-kippu.jp/fare/ticket/431"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "会場公式は港区役所駅2番出口から徒歩8分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": true,
+    "oneWayYen": 5650,
+    "roundTripYen": 11300,
+    "oneWayMinutes": 65,
+    "routeSummary": "博多→熊本（九州新幹線）→通町筋（熊本市電）",
+    "sourceUrls": [
+      "https://www.mapion.co.jp/phonebook/M04101/43101/0000DRB9_001pa/",
+      "https://www.jr-odekake.net/ticket/guide/ebook/pages/pageindices/index4.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "通町筋から徒歩約5分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": true,
+    "oneWayYen": 35190,
+    "roundTripYen": 70380,
+    "oneWayMinutes": 390,
+    "routeSummary": "博多→東京（山陽・東海道新幹線）→仙台（東北新幹線）→荒井（仙台市地下鉄東西線）",
+    "sourceUrls": [
+      "https://www.gip-web.co.jp/hall",
+      "https://www.jrkyushu-kippu.jp/fare/ticket/322"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "仙台GIGSの最寄りは荒井駅。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "kyushu",
+    "originStation": "博多駅",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": true,
+    "oneWayYen": 9800,
+    "roundTripYen": 19600,
+    "oneWayMinutes": 105,
+    "routeSummary": "博多→広島（山陽新幹線）→海岸通（広島電鉄5号線）",
+    "sourceUrls": [
+      "https://bluelive.jp/access",
+      "https://www.jr-odekake.net/ticket/guide/ebook/pages/pageindices/index4.html"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": true,
+    "notes": "海岸通から徒歩約5分。通常期・普通車指定席。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "k-arena-yokohama",
+    "destinationStation": "横浜",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "ゆいレールは那覇空港〜てだこ浦西間のみで、本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "zepp-fukuoka",
+    "destinationStation": "唐人町",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "takamatsu-festhalle",
+    "destinationStation": "瓦町",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "zepp-osaka-bayside",
+    "destinationStation": "桜島",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "zepp-sapporo",
+    "destinationStation": "中島公園",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "niigata-lots",
+    "destinationStation": "新潟",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "comtec-portbase",
+    "destinationStation": "港区役所",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "kumamoto-b9-v1",
+    "destinationStation": "通町筋",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "sendai-gigs",
+    "destinationStation": "荒井",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  },
+  {
+    "originRegionId": "okinawa",
+    "originStation": "那覇空港駅",
+    "venueId": "blue-live-hiroshima",
+    "destinationStation": "海岸通",
+    "available": false,
+    "oneWayYen": null,
+    "roundTripYen": null,
+    "oneWayMinutes": null,
+    "routeSummary": "鉄道のみでは到達不能",
+    "sourceUrls": [
+      "https://www.yui-rail.co.jp/en/routemap/"
+    ],
+    "checkedAt": "2026-09-03",
+    "needsReview": false,
+    "notes": "本土鉄道網への鉄道接続がない。"
+  }
+]

@@ -174,7 +174,7 @@ describe("tour budget calculator", () => {
     expect(car?.available).toBe(false);
   });
 
-  it("uses the Tokyo–Niigata Shinkansen round-trip estimate in both directions", () => {
+  it("uses the static Tokyo–Niigata rail planning value", () => {
     const niigata = venues.find((venue) => venue.id === "niigata-lots");
     const yokohama = venues.find((venue) => venue.id === "k-arena-yokohama");
     if (!niigata || !yokohama) throw new Error("Missing venue fixture");
@@ -186,15 +186,16 @@ describe("tour budget calculator", () => {
       (option) => option.mode === "rail",
     );
 
-    expect(outbound?.cost).toEqual({
-      min: 17_280,
-      typical: 21_600,
-      max: 25_920,
+    expect(outbound?.cost).toEqual({ min: 21_560, typical: 21_560, max: 21_560 });
+    expect(outbound).toMatchObject({
+      originStation: "東京",
+      destinationStation: "新潟",
+      checkedAt: "2026-09-03",
     });
-    expect(reverse?.cost).toEqual(outbound?.cost);
+    expect(reverse?.cost).not.toEqual(outbound?.cost);
   });
 
-  it("keeps the generic rail estimate for other adjacent regions", () => {
+  it("uses the static route table instead of a generic adjacent-region estimate", () => {
     const nagoya = venues.find((venue) => venue.id === "comtec-portbase");
     if (!nagoya) throw new Error("Missing Nagoya venue fixture");
 
@@ -202,6 +203,32 @@ describe("tour budget calculator", () => {
       (option) => option.mode === "rail",
     );
 
-    expect(rail?.cost.typical).toBe(11_200);
+    expect(rail?.cost.typical).toBe(14_200);
+    expect(rail).toMatchObject({
+      originStation: "大阪",
+      destinationStation: "港区役所",
+    });
+  });
+
+  it("sets a rail overnight at the 300-minute boundary", () => {
+    const yokohama = venues.find((venue) => venue.id === "k-arena-yokohama");
+    const niigata = venues.find((venue) => venue.id === "niigata-lots");
+    if (!yokohama || !niigata) throw new Error("Missing venue fixture");
+
+    const exactlyThreeHundred = generateRouteOptions("kyushu", yokohama).find(
+      (option) => option.mode === "rail",
+    );
+    const underThreeHundred = generateRouteOptions("tokai", niigata).find(
+      (option) => option.mode === "rail",
+    );
+
+    expect(exactlyThreeHundred).toMatchObject({
+      minutes: { typical: 300 },
+      nights: 1,
+    });
+    expect(underThreeHundred).toMatchObject({
+      minutes: { typical: 295 },
+      nights: 0,
+    });
   });
 });
