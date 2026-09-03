@@ -173,7 +173,8 @@ a { color: var(--blue-strong); font-weight: 750; text-underline-offset: .2em; }
 .show-option.is-selected { border-color: var(--blue); background: var(--blue-soft); box-shadow: inset 0 0 0 1px var(--blue); }
 .show-option input { grid-area: check; align-self: center; width: 22px; height: 22px; margin: 0; accent-color: var(--blue); }
 .show-date { grid-area: date; font-size: .78rem; font-weight: 850; }
-.show-venue { grid-area: venue; align-self: end; font-weight: 760; line-height: 1.35; }
+.show-venue { display: grid; grid-area: venue; align-self: end; gap: 2px; font-weight: 760; line-height: 1.35; }
+.show-location { color: var(--muted); font-size: .72rem; font-weight: 700; }
 .show-price { grid-area: price; align-self: end; justify-self: end; font-size: .85rem; font-weight: 820; }
 .status-badge {
   display: inline-flex;

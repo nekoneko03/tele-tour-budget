@@ -21,6 +21,7 @@ import {
   hotelRateFromUrl,
   parseNonNegativeNumber,
 } from "../lib/hotel-rate";
+import { formatShowDate, formatVenueLocation } from "../lib/display";
 import { buildShareUrl } from "../lib/share-url";
 
 const venueById = new Map(venues.map((venue) => [venue.id, venue]));
@@ -247,6 +248,7 @@ export default function Home() {
                 <input
                   type="number"
                   min="0"
+                  step="500"
                   inputMode="numeric"
                   value={hotelNightlyRateInput}
                   onChange={(event) =>
@@ -299,11 +301,18 @@ export default function Home() {
                       onChange={() => toggleShow(show.id)}
                     />
                     <span className="show-date">
-                      {show.date.replaceAll("-", ".")}（{show.dayOfWeek}）
+                      {formatShowDate(show)}
                     </span>
                     <span className="show-venue">
-                      {venue?.name}
-                      {"day" in show && show.day ? ` Day ${show.day}` : ""}
+                      <span>
+                        {venue?.name}
+                        {"day" in show && show.day ? ` Day ${show.day}` : ""}
+                      </span>
+                      {venue && (
+                        <small className="show-location">
+                          {formatVenueLocation(venue)}
+                        </small>
+                      )}
                     </span>
                     <span
                       className="show-price"
@@ -346,9 +355,9 @@ export default function Home() {
                         <div className="trip-card-heading">
                           <div>
                             <p className="trip-date">
-                              {trip.shows[0].date.replaceAll("-", ".")}
+                              {formatShowDate(trip.shows[0])}
                               {trip.shows.length > 1 &&
-                                ` – ${trip.shows.at(-1)?.date.replaceAll("-", ".")}`}
+                                ` – ${formatShowDate(trip.shows[trip.shows.length - 1])}`}
                             </p>
                             <h3>{trip.city}遠征</h3>
                             <p>
