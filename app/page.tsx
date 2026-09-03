@@ -16,6 +16,11 @@ import {
   type TransportMode,
   type TripOverride,
 } from "../lib/calculator";
+import {
+  hotelRateForCalculation,
+  hotelRateFromUrl,
+  parseNonNegativeNumber,
+} from "../lib/hotel-rate";
 import { buildShareUrl } from "../lib/share-url";
 
 const venueById = new Map(venues.map((venue) => [venue.id, venue]));
@@ -38,19 +43,13 @@ function yen(value: number) {
   return `${Math.round(value).toLocaleString("ja-JP")}円`;
 }
 
-function safeNumber(value: string | null, fallback: number, integer = false) {
-  if (value === null || value.trim() === "") return fallback;
-  const parsed = Number(value);
-  if (!Number.isFinite(parsed) || parsed < 0) return fallback;
-  return integer ? Math.max(1, Math.round(parsed)) : parsed;
-}
-
 export default function Home() {
   const [originRegionId, setOriginRegionId] = useState<RegionId>("kansai");
   const [selectedShowIds, setSelectedShowIds] = useState<Set<string>>(
     () => new Set(),
   );
-  const [hotelNightlyRate, setHotelNightlyRate] = useState(8_000);
+  // A string state lets a user erase the initial 0 before typing a new value.
+  const [hotelNightlyRateInput, setHotelNightlyRateInput] = useState("8000");
   const [tripOverrides, setTripOverrides] = useState<
     Record<string, TripOverride | undefined>
   >({});
@@ -71,14 +70,14 @@ export default function Home() {
       );
     }
 
-    setHotelNightlyRate(safeNumber(params.get("hotel"), 8_000));
+    setHotelNightlyRateInput(String(hotelRateFromUrl(params.get("hotel"))));
 
     const parsedOverrides: Record<string, TripOverride> = {};
     for (const entry of params.getAll("trip")) {
       const [tripId, mode, nights, carPartySize] = entry.split("|");
       if (!tripId || !validModes.has(mode as TransportMode)) continue;
-      const parsedNights = safeNumber(nights ?? null, Number.NaN);
-      const parsedCarPartySize = safeNumber(
+      const parsedNights = parseNonNegativeNumber(nights ?? null, Number.NaN);
+      const parsedCarPartySize = parseNonNegativeNumber(
         carPartySize ?? null,
         Number.NaN,
         true,
@@ -124,6 +123,7 @@ export default function Home() {
     }
     return safeOverrides;
   }, [availableTrips, tripOverrides]);
+  const hotelNightlyRate = hotelRateForCalculation(hotelNightlyRateInput);
   const budget = useMemo(
     () =>
       calculateTourBudget({
@@ -160,6 +160,8 @@ export default function Home() {
     const params = new URLSearchParams();
     params.set("region", originRegionId);
     params.set("shows", selectedShows.map((show) => show.id).join(","));
+    // Empty (or otherwise invalid) in-progress input is deliberately shared
+    // as 0, matching the value used in the displayed calculation.
     params.set("hotel", String(hotelNightlyRate));
 
     for (const trip of availableTrips) {
@@ -246,9 +248,9 @@ export default function Home() {
                   type="number"
                   min="0"
                   inputMode="numeric"
-                  value={hotelNightlyRate}
+                  value={hotelNightlyRateInput}
                   onChange={(event) =>
-                    setHotelNightlyRate(safeNumber(event.target.value, 0))
+                    setHotelNightlyRateInput(event.target.value)
                   }
                 />
               </label>
@@ -415,7 +417,7 @@ export default function Home() {
                               aria-label={`${trip.city}遠征で車の費用を割る人数`}
                               onChange={(event) =>
                                 updateTrip(trip.id, {
-                                  carPartySize: safeNumber(
+                                  carPartySize: parseNonNegativeNumber(
                                     event.target.value,
                                     1,
                                     true,
